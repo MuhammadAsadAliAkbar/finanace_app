@@ -13,7 +13,7 @@ const app = express();
 
 // Middleware
 app.use(helmet());
-app.use(cors({ origin: ['http://localhost:3000', 'http://127.0.0.1:3000'], credentials: true }));
+app.use(cors({ origin: ['https://finanace-app-4czo.vercel.app'], credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
