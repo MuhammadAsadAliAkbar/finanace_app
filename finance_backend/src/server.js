@@ -29,7 +29,7 @@ app.get('/api/analytics/insights', async (req, res, next) => {
   try {
     const axios = require('axios');
     // For simplicity without extra dep, use fetch (Node 18+)
-    const pythonUrl = process.env.PYTHON_SERVICE_URL || 'http://localhost:8000';
+    const pythonUrl = process.env.PYTHON_SERVICE_URL
     const response = await fetch(`${pythonUrl}/insights?user_id=${req.query.user_id || ''}`);
     const data = await response.json();
     res.json(data);
