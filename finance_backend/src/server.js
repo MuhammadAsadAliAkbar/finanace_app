@@ -49,7 +49,7 @@ app.get('/api/analytics/insights', async (req, res, next) => {
   }
 });
 
-app.get('/api/health', (req, res) => {
+app.get('/', (req, res) => {
   res.json({ success: true, message: 'Finance Management API is running', timestamp: new Date() });
 });
 
